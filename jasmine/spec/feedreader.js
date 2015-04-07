@@ -68,14 +68,40 @@ $(function() {
         });
 
         //Additional Test Coverage
-        //test if the menu is hidden after the feedlist link is clicked
-        it('hidden after the feedlist link is clicked', function() {
+        //test if the menu is hidden after the first feedlist link is clicked
+        it('hidden after the first feedlist links is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             //simulate the first feed list link is clicked
             $('ul.feed-list').find('a')[0].click();
             expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
+        //test if the menu is hidden after the second feedlist link is clicked
+        it('hidden after the second feedlist links is clicked', function() {
+            menuIcon.click();//simulate icon is clicked
+            expect(body.hasClass('menu-hidden')).toBeFalsy();
+            //simulate the second feed list link is clicked
+            $('ul.feed-list').find('a')[1].click();
+            expect(body.hasClass('menu-hidden')).toBeTruthy();
+        });
+        //test if the menu is hidden after the third feedlist link is clicked
+        it('hidden after the third feedlist links is clicked', function() {
+            menuIcon.click();//simulate icon is clicked
+            expect(body.hasClass('menu-hidden')).toBeFalsy();
+            //simulate the third feed list link is clicked
+            $('ul.feed-list').find('a')[2].click();
+            expect(body.hasClass('menu-hidden')).toBeTruthy();
+        });
+        //test if the menu is hidden after the forth feedlist link is clicked
+        it('hidden after the forth feedlist links is clicked', function() {
+            menuIcon.click();//simulate icon is clicked
+            expect(body.hasClass('menu-hidden')).toBeFalsy();
+            //simulate the forth feed list link is clicked
+            $('ul.feed-list').find('a')[3].click();
+            expect(body.hasClass('menu-hidden')).toBeTruthy();
+        });
+
+
 
     });
 
