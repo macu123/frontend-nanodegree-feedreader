@@ -13,6 +13,6 @@ The url for this project is http://macu123.github.io/frontend-nanodegree-feedrea
 <br>
 Menue extra testing:<br>
 1. Checks if the menu will be hidden after the first feedlist link is clicked.<br>
-2.Checks if the menu will be hidden after the second feedlist link is clicked.<br>
-3.Checks if the menu will be hidden after the third feedlist link is clicked.<br>
+2. Checks if the menu will be hidden after the second feedlist link is clicked.<br>
+3. Checks if the menu will be hidden after the third feedlist link is clicked.<br>
 4. Checks if the menu will be hidden after the forth feedlist link is clicked.
