@@ -50,8 +50,9 @@ $(function() {
     //The test suite is for the menu
     describe('The menu', function() {
 
-        //variable to save body element
+        //local variables
         var body = $('body');
+        var menuIcon = $('.menu-icon-link');
         
         it('hide by default', function() {
             //check if body has 'menu-hidden' class to be hidden
@@ -60,11 +61,20 @@ $(function() {
 
         //test if visibility is changed when menu icon is clicked
         it('changes visibility when the menu icon is clicked', function() {
-            var menuIcon = $('.menu-icon-link');
             menuIcon.click(); //simulate icon clicking
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             menuIcon.click();//simulate icon clicking again
             expect(body.hasClass("menu-hidden")).toBeTruthy();
+        });
+
+        //Additional Test Coverage
+        //test if the menu is hidden after the feedlist link is clicked
+        it('hidden after the feedlist link is clicked', function() {
+            menuIcon.click();//simulate icon is clicked
+            expect(body.hasClass('menu-hidden')).toBeFalsy();
+            //simulate the first feed list link is clicked
+            $('ul.feed-list').find('a')[0].click();
+            expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
 
     });
