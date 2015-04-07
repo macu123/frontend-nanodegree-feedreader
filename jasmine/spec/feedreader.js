@@ -69,7 +69,7 @@ $(function() {
 
         //Additional Test Coverage
         //test if the menu is hidden after the first feedlist link is clicked
-        it('hidden after the first feedlist links is clicked', function() {
+        it('hidden after the first feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             //simulate the first feed list link is clicked
@@ -77,7 +77,7 @@ $(function() {
             expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
         //test if the menu is hidden after the second feedlist link is clicked
-        it('hidden after the second feedlist links is clicked', function() {
+        it('hidden after the second feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             //simulate the second feed list link is clicked
@@ -85,7 +85,7 @@ $(function() {
             expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
         //test if the menu is hidden after the third feedlist link is clicked
-        it('hidden after the third feedlist links is clicked', function() {
+        it('hidden after the third feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             //simulate the third feed list link is clicked
@@ -93,7 +93,7 @@ $(function() {
             expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
         //test if the menu is hidden after the forth feedlist link is clicked
-        it('hidden after the forth feedlist links is clicked', function() {
+        it('hidden after the forth feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             //simulate the forth feed list link is clicked
