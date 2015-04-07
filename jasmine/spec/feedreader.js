@@ -36,7 +36,7 @@ $(function() {
                 expect(element.url).toBeDefined();
                 expect(element.url.length).not.toEqual(0);
             });
-         });
+        });
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
@@ -47,21 +47,24 @@ $(function() {
                 expect(element.name).toBeDefined();
                 expect(element.name.length).not.toEqual(0);                
             });
-         });
+        });
     });
 
 
     /* TODO: Write a new test suite named "The menu" */
     describe('The menu', function() {
-        beforeEach(function() {
-            body = $('body');
-        });
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+        //variable to save body element
+        var body;
+
+        beforeEach(function() {
+            body = $('body');
+        });
          
         it('hide by default', function() {
             //check if body has 'menu-hidden' class to be hidden
@@ -95,13 +98,15 @@ $(function() {
         beforeEach(function(done) {
             //call asynchronous function
             //call done() after it returns
-            loadFeed(0, done);
+            loadFeed(1, done);
         });
 
         //begin testing
         it('there is at least a single entry element within the feed container', function(done) {
+            //get the number of .entry element
+            //Check if the number is empty
             var len = $('.feed').find('.entry').length;
-            expect(len).toBeGreaterThan(0);
+            expect(len).not.toEqual(0);
         });
     });
 
@@ -112,13 +117,26 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        /*beforeEach(function(done) {
-            setTimeout
-        })
+        //variable for old feed
+        var oldContent;
 
-        it("the content actually changes after a new feed is loaded", function() {
-
-        })*/
+        beforeEach(function(done) {
+            //call asychronous function to get feed
+            //Save it to oldContent
+            //Then call asychronous function to load additional feed
+            loadFeed(0, function() {
+                oldContent = $('.feed').html();
+                loadFeed(1, done);
+            });
+        });
+        
+        it('the content actually changes after a new feed is loaded', function() {
+            //get newContent
+            //Then compare newContent with oldContent
+            //to check if there is a change made
+            var newContent = $('.feed').html();
+            expect(newContent).not.toEqual(oldContent);
+        });
     });
 
 }());
