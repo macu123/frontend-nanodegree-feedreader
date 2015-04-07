@@ -26,7 +26,6 @@ $(function() {
             expect(allFeeds.length).toBeGreaterThan(0);
         });
 
-
         //To loop through each feed, check if each feed
         //has url defined and not empty
         it('each feed has a URL defined', function() {
@@ -45,7 +44,6 @@ $(function() {
             });
         });
     });
-
 
     //The test suite is for the menu
     describe('The menu', function() {
@@ -72,36 +70,37 @@ $(function() {
         it('hidden after the first feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
-            //simulate the first feed list link is clicked
+            //simulate the first feedlist link is clicked
             $('ul.feed-list').find('a')[0].click();
             expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
+
         //test if the menu is hidden after the second feedlist link is clicked
         it('hidden after the second feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
-            //simulate the second feed list link is clicked
+            //simulate the second feedlist link is clicked
             $('ul.feed-list').find('a')[1].click();
             expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
+
         //test if the menu is hidden after the third feedlist link is clicked
         it('hidden after the third feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
-            //simulate the third feed list link is clicked
+            //simulate the third feedlist link is clicked
             $('ul.feed-list').find('a')[2].click();
             expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
+
         //test if the menu is hidden after the forth feedlist link is clicked
         it('hidden after the forth feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
-            //simulate the forth feed list link is clicked
+            //simulate the forth feedlist link is clicked
             $('ul.feed-list').find('a')[3].click();
             expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
-
-
 
     });
 
