@@ -1,4 +1,4 @@
-**Feedreader Testing**([Live project link](http://macu123.github.io/frontend-nanodegree-feedreader/))
+**Feedreader Testing** ([Live project link](http://macu123.github.io/frontend-nanodegree-feedreader/))
 <br>
 This web application is the project 6 for Front-End Nanodegree at Udacity. And the purpose of this project is to test RSS feed reader functionality using Jasmine framework.
 <br>
