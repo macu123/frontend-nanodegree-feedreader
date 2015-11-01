@@ -114,11 +114,10 @@ $(function() {
         });
 
         //begin testing
-        it('there is at least a single entry element within the feed container', function(done) {
+        it('there is at least a single entry element within the feed container', function() {
             //get the number of .entry element
             //Check if the number is greater than 0
             expect($('.feed').find('.entry').length).toBeGreaterThan(0);
-            done();
         });
     });
 
