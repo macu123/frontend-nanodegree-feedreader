@@ -28,7 +28,7 @@ $(function() {
 
         //to loop through each feed, check if each feed
         //has url defined and not empty
-        it('each feed has a URL defined', function() {
+        it('have valid URLs', function() {
             allFeeds.forEach(function(element) {
                 expect(element.url).toBeDefined();
                 expect(element.url.length).toBeGreaterThan(0);
@@ -37,7 +37,7 @@ $(function() {
 
         //to loop through each feed, check if each feed
         //has name defined and not empty
-        it('each feed has a name defined', function() {
+        it('have valid names', function() {
             allFeeds.forEach(function(element) {
                 expect(element.name).toBeDefined();
                 expect(element.name.length).toBeGreaterThan(0);                
@@ -58,7 +58,7 @@ $(function() {
         });
 
         //test if visibility is changed when menu icon is clicked
-        it('changes visibility when the menu icon is clicked', function() {
+        it('change visibility when the menu icon is clicked', function() {
             menuIcon.click(); //simulate icon clicking
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             menuIcon.click();//simulate icon clicking again
@@ -67,7 +67,7 @@ $(function() {
 
         //additional Test Coverage
         //test if the menu is hidden after the first feedlist link is clicked
-        it('hidden after the first feedlist link is clicked', function() {
+        it('hide after the first feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             //simulate the first feedlist link is clicked
@@ -76,7 +76,7 @@ $(function() {
         });
 
         //test if the menu is hidden after the second feedlist link is clicked
-        it('hidden after the second feedlist link is clicked', function() {
+        it('hide after the second feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             //simulate the second feedlist link is clicked
@@ -85,7 +85,7 @@ $(function() {
         });
 
         //test if the menu is hidden after the third feedlist link is clicked
-        it('hidden after the third feedlist link is clicked', function() {
+        it('hide after the third feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             //simulate the third feedlist link is clicked
@@ -94,7 +94,7 @@ $(function() {
         });
 
         //test if the menu is hidden after the forth feedlist link is clicked
-        it('hidden after the forth feedlist link is clicked', function() {
+        it('hide after the forth feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             //simulate the forth feedlist link is clicked
@@ -114,7 +114,7 @@ $(function() {
         });
 
         //begin testing
-        it('there is at least a single entry element within the feed container', function() {
+        it('are included in the feed container when the app is loaded initially', function() {
             //get the number of .entry element
             //Check if the number is greater than 0
             expect($('.feed').find('.entry').length).toBeGreaterThan(0);
@@ -141,7 +141,7 @@ $(function() {
             });
         });
         
-        it('the content actually changes after a new feed is loaded', function() {
+        it('ensure the content actually changes after a new feed is loaded', function() {
             //get newContent
             //Then compare newContent with oldContent
             //to check if there is a change made
