@@ -26,7 +26,7 @@ $(function() {
             expect(allFeeds.length).toBeGreaterThan(0);
         });
 
-        //To loop through each feed, check if each feed
+        //to loop through each feed, check if each feed
         //has url defined and not empty
         it('each feed has a URL defined', function() {
             allFeeds.forEach(function(element) {
@@ -35,7 +35,7 @@ $(function() {
             });
         });
 
-        //To loop through each feed, check if each feed
+        //to loop through each feed, check if each feed
         //has name defined and not empty
         it('each feed has a name defined', function() {
             allFeeds.forEach(function(element) {
@@ -45,7 +45,7 @@ $(function() {
         });
     });
 
-    //The test suite is for the menu
+    //the test suite is for the menu
     describe('The menu', function() {
 
         //local variables
@@ -65,7 +65,7 @@ $(function() {
             expect(body.hasClass("menu-hidden")).toBeTruthy();
         });
 
-        //Additional Test Coverage
+        //additional Test Coverage
         //test if the menu is hidden after the first feedlist link is clicked
         it('hidden after the first feedlist link is clicked', function() {
             menuIcon.click();//simulate icon is clicked
@@ -104,7 +104,7 @@ $(function() {
 
     });
 
-    //This test is for initial entries
+    //this test is for initial entries
     describe('Initial Entries', function() {
 
         //call asynchronous function
@@ -121,10 +121,10 @@ $(function() {
         });
     });
 
-    /* TODO: Write a new test suite named "New Feed Selection"*/
+    //a new test suite named "New Feed Selection"
     describe('New Feed Selection', function() {
 
-        /* TODO: Write a test that ensures when a new feed is loaded
+        /* a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
